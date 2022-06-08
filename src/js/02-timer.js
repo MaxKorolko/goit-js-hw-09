@@ -44,7 +44,7 @@ function startCounter() {
     const differenceData = convertMs(userSelectedDate - currentDate);
     updatesCounter(differenceData);
 
-    if (refs.secondsEl.textContent === '00') {
+    if (Object.values(differenceData).every(value => value === 0)) {
       clearInterval(timerId);
     }
   }, 1000);
