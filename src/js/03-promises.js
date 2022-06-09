@@ -22,7 +22,7 @@ function conclusionPromises(event) {
 }
 
 function getFormData(el) {
-  formData = {};
+  const formData = {};
 
   new FormData(el).forEach((value, name) => (formData[name] = Number(value)));
   return formData;
