@@ -9,8 +9,8 @@ function conclusionPromises(event) {
 
   const { delay, step, amount } = getFormData(event.currentTarget);
 
-  for (let i = 1; i <= amount; i += 1) {
-    createPromise(i, delay + i * step)
+  for (let i = 0; i <= amount; i += 1) {
+    createPromise(i + 1, delay + i * step)
       .then(({ position, delay }) => {
         Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
       })
